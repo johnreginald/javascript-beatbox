@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+   <h1>Hello World</h1>
+   <button>Change</button>
+
+   <script src="jquery.js"></script>
+   <script type="text/javascript">
+      $("button").click(function() {
+         $("h1").text("World Hello")
+            .css("color", "red").css("background-color", "black")
+      });
+   </script>
+</body>
+</html>

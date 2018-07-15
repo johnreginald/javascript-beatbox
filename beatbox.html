@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<audio src="Wae.mp3" controls="controls"></audio>
+	
+	<script src="jquery.js"></script>
+	<script>
+		var audio = $("audio")[0];
+		
+		$(document).keypress(function(event) {
+			if ( event.key == "p" ) {
+				if ( audio.paused ) {
+					audio.play();
+				} else {
+					audio.pause();
+				}
+			}
+
+			if ( event.key == "m" ) {
+				audio.muted = ! audio.muted;
+			}
+
+			if ( event.key == "." ) {
+				audio.currentTime = audio.currentTime + 10;
+			}
+
+			if ( event.key == "," ) {
+				audio.currentTime = audio.currentTime - 10;
+			}
+		});	
+	</script>
+</body>
+</html>
